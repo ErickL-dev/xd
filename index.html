@@ -24,7 +24,7 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             width: 90%;
             max-width: 800px;
-            margin-bottom: 40px; /* Añadido para separar el menú del resto del contenido */
+            margin-bottom: 40px; /* Espacio para separar el menú de las tarjetas */
         }
         .cloud {
             width: 100px;
@@ -92,6 +92,7 @@
             cursor: pointer;
             border: none;
             font-size: 16px;
+            display: inline-block; /* Asegura que el botón no se expanda */
         }
         .menu-content {
             display: none;
@@ -103,6 +104,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             min-width: 160px;
             z-index: 1;
+            margin-top: 10px;
         }
         .menu-content a {
             color: #333;
@@ -182,12 +184,12 @@
         <h1>Tu Título Aquí</h1>
         <p>Añade una descripción si quieres</p>
         <div class="menu">
-            <button class="menu-button">Menú</button>
+            <button class="menu-button"></button>
             <div class="menu-content">
-                <a href="#">Inicio</a>
-                <a href="#">Sobre Nosotros</a>
-                <a href="#">Servicios</a>
-                <a href="#">Contacto</a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
             </div>
         </div>
         <a href="#" class="button">Añade una Llamada a la Acción</a>
