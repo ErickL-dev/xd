@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #d6d8e6;
+}
+
+.border-blur {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    background: transparent;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: blur(50px);
+}
+
+.box {
+    position: relative;
+    flex-direction: space-around;
+    width: 300px;
+    height: 400px;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.border-blur::before,
+.border-blur::after {
+    border-radius: 50%;
+    height: 400px !important;
+    width: 500px !important;
+}
+
+.box::after,
+.border-blur::after {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-image: conic-gradient(
+        transparent,
+        transparent,
+        transparent,
+        #eeff01
+    );
+    animation: animate 4s linear infinite;
+    animation-delay: -2s;
+}
+
+
+.box::before,
+.border-blur::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-image: conic-gradient(
+        transparent,
+        transparent,
+        transparent,
+        #ff0000
+    );
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.box span {
+    position: absolute;
+    inset: 5px;
+    border-radius: 16px;
+    background: #0c1022;
+    z-index: 1;
+}
+
+.text-inner {
+    position: absolute; /* Coloca el texto encima de la tarjeta */
+    color: #fff;
+    font-family: sans-serif;
+    text-align: center;
+    z-index: 2;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.box {
+    flex-shrink: 0; 
+    width: 200px; 
+    height: 270px; 
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#contenido {
+    margin-bottom: 20px; 
+}
+.carousel-container {
+    display: flex; 
+    overflow-x: auto;
+    overflow-y: hidden; 
+    white-space: nowrap; 
+    gap: 10px; 
+    gap: 20px
+}
+
+    @media only screen and (max-width: 600px) {
+        .book-group {
+            overflow-x: hidden; 
+            white-space: normal;
+        }
+    }
+
+    .content {
+        min-height: 100vh; 
+        padding: 20px;
+        box-sizing: border-box;
+    }
